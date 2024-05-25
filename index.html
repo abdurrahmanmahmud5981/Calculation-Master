@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculation Master</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./responsiv.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Calculation Master</h1>
+
+      <!-- addition start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Addition</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error1"></p>
+              <label for="num1">Number 1:</label>
+              <input
+                type="number"
+                id="num1"
+                placeholder="Enter number 1"
+                class="input"
+              />
+              <label for="num2">Number 2:</label>
+              <input
+                type="number"
+                id="num2"
+                placeholder="Enter number 2"
+                class="input"
+              />
+            </div>
+            <button class="btn" onclick="add()">Add</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result1"></p>
+        </div>
+      </section>
+      <!-- addition end-->
+      <!-- Subtraction start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Subtraction</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error2"></p>
+              <label for="num1">Number 1:</label>
+              <input
+                type="number"
+                id="sub1"
+                placeholder="Enter number 1"
+                class="input"
+              />
+              <label for="num2">Number 2:</label>
+              <input
+                type="number"
+                id="sub2"
+                placeholder="Enter number 2"
+                class="input"
+              />
+            </div>
+            <button class="btn2" onclick="subtract()">subtract</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result2"></p>
+        </div>
+      </section>
+      <!-- Subtraction end-->
+
+      <!-- Multiplication start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Multiplication</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error3"></p>
+              <label for="num1">Number 1:</label>
+              <input
+                type="number"
+                id="mul1"
+                placeholder="Enter number 1"
+                class="input"
+              />
+              <label for="num2">Number 2:</label>
+              <input
+                type="number"
+                id="mul2"
+                placeholder="Enter number 2"
+                class="input"
+              />
+            </div>
+            <button class="btn3" onclick="multiply()">Multiply</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result3"></p>
+        </div>
+      </section>
+      <!-- Multiplication end-->
+
+      <!-- Division start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Division</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error4"></p>
+              <label for="num1">Number 1:</label>
+              <input
+                type="number"
+                id="div1"
+                placeholder="Enter number 1"
+                class="input"
+              />
+              <label for="num2">Number 2:</label>
+              <input
+                type="number"
+                id="div2"
+                placeholder="Enter number 2"
+                class="input"
+              />
+            </div>
+            <button class="btn4" onclick="divide()">Divide</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result4"></p>
+        </div>
+      </section>
+      <!-- Division end-->
+
+      <!-- Remainder start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Remainder Calculation</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error5"></p>
+              <label for="num1">Number 1:</label>
+              <input
+                type="number"
+                id="rem1"
+                placeholder="Enter number 1"
+                class="input"
+              />
+              <label for="num2">Number 2:</label>
+              <input
+                type="number"
+                id="rem2"
+                placeholder="Enter number 2"
+                class="input"
+              />
+            </div>
+            <button class="btn5" onclick="remainder()">Remainder</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result5"></p>
+        </div>
+      </section>
+      <!-- Remainder end-->
+
+      <!-- Interest start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Calculate Interest</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error6"></p>
+              <p class="formula">formula : (principal * rate * time) / 100</p>
+              <label for="principal">Principal:</label>
+              <input
+                type="number"
+                id="principal"
+                placeholder="Enter principal"
+                class="input"
+              />
+              <label for="rate">Rate (%):</label>
+              <input
+                type="number"
+                id="rate"
+                placeholder="Enter rate"
+                class="input"
+              />
+              <label for="time">Time (years):</label>
+              <input
+                type="number"
+                id="time"
+                placeholder="Enter time"
+                class="input"
+              />
+            </div>
+            <button class="btn6" onclick="calculateInterest()">
+              Calculate Interest
+            </button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result6"></p>
+        </div>
+      </section>
+      <!-- Interest end-->
+
+      <!-- fahrenheit to celcius start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Fahrenheit to Celsius</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error7"></p>
+              <p class="formula">formula : (fahrenheit - 32) * 5 / 9</p>
+              <label for="fahrenheit">Fahrenheit:</label>
+              <input
+                type="number"
+                id="fahrenheit"
+                placeholder="Enter fahrenheit"
+                class="input"
+              />
+            </div>
+            <button class="btn7" onclick="fahrenheitToCelsius()">
+              Convert
+            </button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result7"></p>
+        </div>
+      </section>
+      <!-- fahrenheit to celcius end -->
+
+      <!-- celcius to fahrenheit start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Celsius to Fahrenheit</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error8"></p>
+              <p class="formula">formula: (celsius * 9 / 5) + 32</p>
+              <label for="celsius">Celsius:</label>
+              <input
+                type="number"
+                id="celsius"
+                placeholder="Enter celsius"
+                class="input"
+              />
+            </div>
+            <button class="btn8" onclick="celsiusToFahrenheit()">
+              Convert
+            </button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result8"></p>
+        </div>
+      </section>
+      <!-- celcius to fahrenheit end -->
+
+      <!-- area of circle start    -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Circle</h2>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error9"></p>
+              <p class="formula">formula: area = π * r * r</p>
+              <label for="radius">Radius:</label>
+              <input
+                type="number"
+                id="radius"
+                placeholder="Enter radius"
+                class="input"
+              />
+            </div>
+            <button class="btn9" onclick="areaOfCircle()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result9"></p>
+        </div>
+      </section>
+      <!-- area of circle end -->
+
+      <!-- area of rectangle start -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Rectangle</h2>
+          <p class="formula">formula: area = length * width</p>
+          <div class="card-body">
+            <div class="input-group">
+              <p id="error10"></p>
+
+              <label for="length">Length:</label>
+              <input
+                type="number"
+                id="length"
+                placeholder="Enter length"
+                class="input"
+              />
+              <label for="width">Width:</label>
+              <input
+                type="number"
+                id="width"
+                placeholder="Enter width"
+                class="input"
+              />
+            </div>
+            <button class="btn10" onclick="areaOfRectangle()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result10"></p>
+        </div>
+      </section>
+
+      <!-- area of rectangle end -->
+
+      <!--area of square  -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Square</h2>
+          <p id="error11"></p>
+          <p class="formula">formula : a = side * side</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="side">Length:</label>
+              <input
+                type="number"
+                id="side"
+                placeholder="Enter length"
+                class="input"
+              />
+            </div>
+            <button class="btn11" onclick="areaOfSquare()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result11"></p>
+        </div>
+      </section>
+      <!-- area of square end -->
+
+      <!-- area of triangle -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Triangle</h2>
+          <p id="error12"></p>
+          <p class="formula">formula : 1/2 * base * height</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="base">Base:</label>
+              <input
+                type="number"
+                id="base"
+                placeholder="Enter base"
+                class="input"
+              />
+              <label for="height">Height:</label>
+              <input
+                type="number"
+                id="height"
+                placeholder="Enter height"
+                class="input"
+              />
+            </div>
+            <button class="btn12" onclick="areaOfTriangle()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result12"></p>
+        </div>
+      </section>
+      <!-- area of triangle end -->
+
+      <!-- area of parallelogram -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Parallelogram</h2>
+          <p id="error13"></p>
+          <p class="formula">formula : area = base * height</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="base1">Base:</label>
+              <input
+                type="number"
+                id="base1"
+                placeholder="Enter base"
+                class="input"
+              />
+              <label for="height1">Height:</label>
+              <input
+                type="number"
+                id="height1"
+                placeholder="Enter height"
+                class="input"
+              />
+            </div>
+            <button class="btn13" onclick="areaOfParallelogram()">
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result13"></p>
+        </div>
+      </section>
+      <!-- area of parallelogram end -->
+
+      <!-- area of rhombus -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Rhombus</h2>
+          <p id="error14"></p>
+          <p class="formula">formula : area = 1/2 * diagonal1 * diagonal2</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="diagonal1">Diagonal1:</label>
+              <input
+                type="number"
+                id="diagonal1"
+                placeholder="Enter diagonal1"
+                class="input"
+              />
+              <label for="diagonal2">Diagonal2:</label>
+              <input
+                type="number"
+                id="diagonal2"
+                placeholder="Enter diagonal2"
+                class="input"
+              />
+            </div>
+            <button class="btn14" onclick="areaOfRhomus()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result14"></p>
+        </div>
+      </section>
+      <!-- area of rhombus end -->
+
+      <!-- area of trapezium -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Trapezium</h2>
+          <p id="error15"></p>
+          <p class="formula">formula : area = 1/2 * (base1 + base2) * height</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="base2">Base1:</label>
+              <input
+                type="number"
+                id="base2"
+                placeholder="Enter base1"
+                class="input"
+              />
+              <label for="base3">Base2:</label>
+              <input
+                type="number"
+                id="base3"
+                placeholder="Enter base2"
+                class="input"
+              />
+              <label for="height2">Height:</label>
+              <input
+                type="number"
+                id="height2"
+                placeholder="Enter height"
+                class="input"
+              />
+            </div>
+            <button class="btn15" onclick="areaOfTrapezium()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result15"></p>
+        </div>
+      </section>
+      <!-- area of trapezium end -->
+
+      <!-- area of ellipse -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Ellipse</h2>
+          <p id="error16"></p>
+          <p class="formula">formula : area = 3.14 * radius1 * radius2</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="radius1">Radius1:</label>
+              <input
+                type="number"
+                id="radius1"
+                placeholder="Enter radius1"
+                class="input"
+              />
+              <label for="radius2">Radius2:</label>
+              <input
+                type="number"
+                id="radius2"
+                placeholder="Enter radius2"
+                class="input"
+              />
+            </div>
+            <button class="btn16" onclick="areaOfEllipse()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result16"></p>
+        </div>
+      </section>
+      <!-- area of ellipse end -->
+
+      <!-- area of cube  -->
+      <section class="cards1">
+        <div class="card1">
+          <h2>Area of Cube</h2>
+          <p id="error17"></p>
+          <p class="formula">formula : area = 6 * a * a</p>
+          <div class="card-body">
+            <div class="input-group">
+              <label for="cubeSide">Side:</label>
+              <input
+                type="number"
+                id="cubeSide"
+                placeholder="Enter side"
+                class="input"
+              />
+            </div>
+            <button class="btn17" onclick="areaOfCube()">Calculate</button>
+          </div>
+        </div>
+        <div class="card1">
+          <h2 id="title">Result :</h2>
+          <p id="result17"></p>
+        </div>
+      </section>
+      <!-- area of cube end -->
+    </div>
+
+    <!-- javaScript link -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
