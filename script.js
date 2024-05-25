@@ -313,6 +313,6 @@ function areaOfCube() {
         const area = 6 * cubeSide * cubeSide;
         document.getElementById('result17').innerText = `Area of Cube: ${area.toFixed(2)} m`;
         document.getElementById('error17').innerText = '';
-        document.getElementById('side').value = '';
+        document.getElementById('cubeSide').value = '';
     }
 }
